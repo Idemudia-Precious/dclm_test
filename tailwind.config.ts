@@ -44,8 +44,8 @@ const config: Config = {
       },
       backgroundImage: {
         "bg-image": 'url("/images/Background.png")',
-        "mid-blue": 'url("/images/vmidb.png")',
-        "mid-white": 'url("/images/vmidw.png")',
+        "mid-blue": 'url("/images/vmidb2.png")',
+        "mid-white": 'url("/images/vmidw2.png")',
         "right-blue": 'url("/images/vrightb.png")',
         "right-white": 'url("/images/vrightw.png")',
       },

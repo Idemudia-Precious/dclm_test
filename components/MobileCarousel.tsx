@@ -20,7 +20,7 @@ const MobileCarousel = () => {
       <Carousel
         plugins={[
           Autoplay({
-            delay: 4000,
+            delay: 3000,
           }),
         ]}
         className="w-full max-w-xs flex-center"

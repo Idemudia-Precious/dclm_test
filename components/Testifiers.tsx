@@ -75,15 +75,15 @@ const Testifiers = () => {
           ))}
         </div>
 
-        <div className="mt-12">
+        <div className="my-16">
           {/* Horizontal Cards */}
           <div className="flex gap-28 flex-center">
             {/* Left Card */}
             <div className="relative h-full hidden lg:flex">
               {/* Blue Card */}
-              <div className="absolute w-[379px] h-[378px] inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-12"></div>
+              <div className="absolute w-[350px] h-[353px] inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-5"></div>
               {/* White Card */}
-              <div className="relative w-[415px] h-[433px] bg-mid-white bg-cover bg-center bg-no-repeat p-6 pt-16 text-center flex flex-col items-center justify-start">
+              <div className="relative w-[360px] h-[374px] bg-mid-white bg-cover bg-center bg-no-repeat p-6 pt-16 text-center flex flex-col items-center justify-start">
                 <Image
                   src={cards[0].image}
                   alt={cards[0].name}
@@ -108,9 +108,9 @@ const Testifiers = () => {
             {/* Middle Card (always visible) */}
             <div className="relative h-full flex-center">
               {/* Blue Card */}
-              <div className="absolute w-[379px] h-[378px]  inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-12"></div>
+              <div className="absolute w-[350px] h-[353px]  inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-5"></div>
               {/* White Card */}
-              <div className="relative w-[415px] h-[433px] bg-mid-white bg-cover bg-center bg-no-repeat p-6 pt-16 text-center flex flex-col items-center justify-start">
+              <div className="relative w-[360px] h-[374px] bg-mid-white bg-cover bg-center bg-no-repeat p-6 pt-16 text-center flex flex-col items-center justify-start">
                 <Image
                   src={cards[1].image}
                   alt={cards[1].name}
@@ -135,9 +135,9 @@ const Testifiers = () => {
             {/* Right Card */}
             <div className="relative hidden lg:flex h-1/2">
               {/* Blue Card */}
-              <div className="absolute w-[379px] h-[378px] inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-12"></div>
+              <div className="absolute w-[350px] h-[353px] inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-5"></div>
               {/* White Card */}
-              <div className="relative w-[415px] h-[433px] bg-mid-white bg-cover bg-center bg-no-repeat p-6 pt-16 text-center flex flex-col items-center justify-start">
+              <div className="relative w-[360px] h-[374px] bg-mid-white bg-cover bg-center bg-no-repeat p-6 pt-16 text-center flex flex-col items-center justify-start">
                 <Image
                   src={cards[2].image}
                   alt={cards[2].name}

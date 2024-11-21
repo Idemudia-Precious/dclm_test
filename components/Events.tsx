@@ -8,9 +8,9 @@ const Events = () => {
     <section className="px-48 lg:px-40 py-10 max-sm:px-8">
       <div className="flex-center m-3">
         <div className="flex flex-center flex-row gap-3">
-          <Separator className="bg-primary overflow-hidden" />
+          <Separator className="bg-primary overflow-hidden max-sm:w-1/6" />
           <div className="mb-4 h3 whitespace-nowrap">Ongoing Events</div>
-          <Separator className="bg-primary overflow-hidden" />
+          <Separator className="bg-primary overflow-hidden max-sm:w-1/6" />
         </div>
       </div>
       <div className="flex-center gap-6 flex lg:flex-row flex-col max-lg:flex-col-reverse">
