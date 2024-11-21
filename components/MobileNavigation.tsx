@@ -21,7 +21,7 @@ const MobileNavigation = () => {
     <header className="mobile-header">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
-          <Image src="/images/menu.png" alt="Search" width={40} height={40} />
+          <Image src="/images/menu.png" alt="Search" width={35} height={35} />
         </SheetTrigger>
         <SheetContent className="shad-sheet h-screen px-3">
           <SheetTitle></SheetTitle>
