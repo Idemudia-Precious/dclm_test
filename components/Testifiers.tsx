@@ -9,10 +9,19 @@ import { testimonies } from "@/constants";
 const Testifiers = () => {
   const [cards, setCards] = useState(testimonies);
 
+  // Active index for the middle card
+  const [activeIndex, setActiveIndex] = useState(1);
+
   const handleLeftClick = () => {
     setCards((prevCards) => {
       // Move the last card to the front
-      return [prevCards[prevCards.length - 1], ...prevCards.slice(0, -1)];
+      const newCards = [
+        prevCards[prevCards.length - 1],
+        ...prevCards.slice(0, -1),
+      ];
+
+      setActiveIndex((prevIndex) => (prevIndex + 1) % prevCards.length);
+      return newCards;
     });
   };
 
@@ -20,7 +29,11 @@ const Testifiers = () => {
   const handleRightClick = () => {
     setCards((prevCards) => {
       // Move the first card to the back
-      return [...prevCards.slice(1), prevCards[0]];
+      const newCards = [...prevCards.slice(1), prevCards[0]];
+      setActiveIndex(
+        (prevIndex) => (prevIndex - 1 + prevCards.length) % prevCards.length
+      );
+      return newCards;
     });
   };
   return (
@@ -46,6 +59,20 @@ const Testifiers = () => {
             width={14}
             onClick={handleRightClick}
           />
+        </div>
+
+        {/* Indicators */}
+        <div className="flex space-x-2">
+          {cards.map((_, index) => (
+            <div
+              key={index}
+              className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                index === activeIndex
+                  ? "bg-primary font-bold scale-125"
+                  : "bg-[#525252]"
+              }`}
+            ></div>
+          ))}
         </div>
 
         <div className="mt-12">
@@ -106,7 +133,7 @@ const Testifiers = () => {
             </div>
 
             {/* Right Card */}
-            <div className="relative hidden lg:flex h-full">
+            <div className="relative hidden lg:flex h-1/2">
               {/* Blue Card */}
               <div className="absolute w-[379px] h-[378px] inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-12"></div>
               {/* White Card */}
