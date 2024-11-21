@@ -7,11 +7,12 @@ import MobileNavigation from "./MobileNavigation";
 import { navItems } from "@/constants";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <nav className="flex-between fixed z-50 w-full p-6 shadow-light-300 dark:shadow-none sm:px-32">
+    <nav className="flex-between bg-white fixed z-50 w-full p-6 shadow-light-300 dark:shadow-none sm:px-40">
       <Link href="/" className="flex items-center gap-1">
         <Image src="/images/logo.png" width={56} height={56} alt="DCLM Logo" />
       </Link>
@@ -25,13 +26,16 @@ const Navbar = () => {
                 pathname === url && "text-decoration-line: underline"
               )}
             >
-              <p className="paragraph-medium hidden lg:block">{name}</p>
+              <p className="base-semibold hidden md:block">{name}</p>
             </li>
           </Link>
         ))}
       </ul>
 
-      <div className="flex-between gap-5">
+      <div className="flex-between gap-5 ">
+        <Button type="submit" className="log-in-button max-lg:hidden">
+          Log In
+        </Button>
         <MobileNavigation />
       </div>
     </nav>

@@ -110,12 +110,20 @@
 }
 
 @layer utilities {
-  .light-border {
-    @apply border-light-800 dark:border-dark-300;
+  .h1 {
+    @apply text-[70px] leading-[42px] font-semibold;
   }
-
-  .light-border-2 {
-    @apply border-light-700 dark:border-dark-400 !important;
+  .h2 {
+    @apply text-[40px] leading-[36px] font-semibold;
+  }
+  .h3 {
+    @apply text-[36px] leading-[28px] font-semibold;
+  }
+  .h4 {
+    @apply text-[20px] leading-[20px] font-medium;
+  }
+  .h5 {
+    @apply text-[20px] leading-[20px] font-semibold;
   }
 
   .h1-bold {
@@ -151,7 +159,7 @@
   }
 
   .paragraph-regular {
-    @apply text-[16px] font-normal leading-[22.4px];
+    @apply text-[30px] font-normal leading-[22.4px];
   }
 
   .paragraph-medium {
@@ -163,7 +171,7 @@
   }
 
   .body-regular {
-    @apply text-[14px] font-normal leading-[19.6px];
+    @apply text-[20px] font-normal leading-[19.6px];
   }
 
   .body-medium {
@@ -258,11 +266,11 @@
   }
 
   .btn {
-    @apply bg-light-800 dark:bg-dark-300 !important;
+    @apply bg-white !important;
   }
 
-  .btn-secondary {
-    @apply bg-light-800 dark:bg-dark-400 !important;
+  .btn-dark {
+    @apply bg-primary text-white !important;
   }
 
   .btn-tertiary {
@@ -284,6 +292,54 @@
       rgba(19, 22, 28, 0.7) 100%
     );
   }
+}
+
+.log-in-button {
+  @apply border-2 border-primary flex-center h-[52px] min-w-[90px] items-center rounded-sm bg-white p-0 text-primary shadow-none transition-all hover:bg-primary hover:text-white !important;
+}
+
+.other-button {
+  @apply border-2 border-primary flex-center h-[36px] min-w-[128px] items-center rounded-sm bg-white p-0 text-primary shadow-none transition-all hover:bg-primary hover:text-white !important;
+}
+
+.other-button-dark {
+  @apply border-2 border-primary flex-center h-[36px] min-w-[128px] items-center rounded-sm bg-primary p-0 text-white shadow-none transition-all hover:bg-white hover:text-primary !important;
+}
+
+.mobile-header {
+  @apply flex h-[60px] justify-between px-5 md:hidden !important;
+}
+.mobile-nav {
+  @apply h5 flex-1 gap-1 text-primary !important;
+}
+.mobile-nav-list {
+  @apply flex flex-1 flex-col gap-4 !important;
+}
+.mobile-nav-item {
+  @apply flex gap-4 w-full justify-start items-center h5 px-6 h-[52px] rounded-full !important;
+}
+.mobile-sign-out-button {
+  @apply h5 flex h-[52px] w-full items-center gap-4 rounded-full bg-primary px-6 text-primary shadow-none transition-all hover:bg-primary !important;
+}
+
+.shad-sheet {
+  @apply pt-20 bg-white !important;
+}
+.shad-sheet button,
+.shad-dialog button {
+  @apply focus:ring-0 focus:ring-offset-0 focus-visible:border-none outline-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+}
+.shad-dropdown-item {
+  @apply cursor-pointer !important;
+}
+.shad-dialog {
+  @apply rounded-[26px] w-[90%] max-w-[400px] px-6 py-8   !important;
+}
+.shad-chart-title {
+  @apply text-white !important;
+}
+.shad-select-item {
+  @apply cursor-pointer !important;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -325,83 +381,4 @@
   margin-top: -140px;
   padding-bottom: 140px;
   display: block;
-}
-
-.mdxeditor-toolbar {
-  background: #ffffff !important;
-}
-
-.dark .mdxeditor-toolbar {
-  background: #151821 !important;
-}
-
-.dark .mdxeditor-toolbar button svg {
-  color: #858ead !important;
-}
-
-.dark .mdxeditor-toolbar button:hover svg {
-  color: #000 !important;
-}
-
-.dark .mdxeditor-toolbar [role="separator"] {
-  border-color: #555 !important;
-}
-
-.markdown a {
-  color: #1da1f2;
-}
-
-.markdown a,
-code {
-  /* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-
-  padding: 2px;
-  color: #ff7000 !important;
-}
-
-.markdown pre {
-  display: grid;
-  width: 100%;
-}
-
-.markdown pre code {
-  width: 100%;
-  display: block;
-  overflow-x: auto;
-
-  color: inherit !important;
-}
-
-[data-lexical-editor="true"] {
-  height: 350px !important;
-  overflow-y: auto !important;
-}
-
-@layer base {
-  :root {
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }

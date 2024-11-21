@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-
 const QuickSand = localFont({
   src: "./fonts/QuickSand.ttf",
   variable: "--font-quicksand",
@@ -20,10 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${QuickSand.variable} font-quicksand antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${QuickSand.variable} font-quicksand antialiased`}>
         {children}
       </body>
     </html>
