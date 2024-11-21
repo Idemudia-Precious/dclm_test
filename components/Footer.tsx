@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <section className="px-48 lg:px-60 py-10 max-sm:px-5">
       <div className="my-7 gap-2 flex-row md:flex-between max-sm:flex-col sm:flex-start">
-        <div className="w-[384px]">
+        <div className="max-w-[340px]">
           <p className="h2-bold">Your Spiritual Welfare is our concern!</p>
           <p>Let us help you on your spiritual journey as you walk with God</p>
         </div>

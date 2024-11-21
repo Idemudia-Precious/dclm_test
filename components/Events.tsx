@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Events = () => {
   return (
-    <section className="p-20 ">
+    <section className="px-48 lg:px-40 py-10 max-sm:px-8">
       <div className="flex-center m-3">
         <div className="flex flex-center flex-row gap-3">
           <Separator className="bg-primary overflow-hidden" />
@@ -19,8 +19,9 @@ const Events = () => {
             <Button type="submit" className="other-button">
               <p className="body-medium">GCK in Kumasi</p>
             </Button>
-            <p className="h2 max-sm:h2">Full Salvation and Healing</p>
-            <p className="h2 max-sm:h2">Through Christ</p>
+            <p className="h2 max-sm:h2 max-w-[500px]">
+              Full Salvation and Healing Through Christ
+            </p>
 
             <p className="h4">
               <span className="h3-bold">Venue: </span> Kumasi, Ghana

@@ -108,7 +108,7 @@ const Testifiers = () => {
             {/* Middle Card (always visible) */}
             <div className="relative h-full flex-center">
               {/* Blue Card */}
-              <div className="absolute w-[379px] h-[378px] inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-12"></div>
+              <div className="absolute w-[379px] h-[378px]  inset-0 bg-mid-blue bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start translate-x-12"></div>
               {/* White Card */}
               <div className="relative w-[415px] h-[433px] bg-mid-white bg-cover bg-center bg-no-repeat p-6 pt-16 text-center flex flex-col items-center justify-start">
                 <Image
