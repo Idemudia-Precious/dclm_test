@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const QuickSand = localFont({
-  src: "./fonts/QuickSand.ttf",
+  src: "./fonts/Quicksand.ttf",
   variable: "--font-quicksand",
   weight: "300 400 500 700 700 900",
 });
